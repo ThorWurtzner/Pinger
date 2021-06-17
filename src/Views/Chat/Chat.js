@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import "./Chat.scss";
 import firebase from "firebase/app";
 import "firebase/firestore";
@@ -9,6 +9,11 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { useCollectionData } from "react-firebase-hooks/firestore";
 
 export default function Chat(props) {
+
+    useEffect(() => {
+        dummy.current.scrollIntoView({ behavior: "smooth" });
+    })
+    
 
     var [ user ] = useAuthState(firebase.auth());
 
@@ -44,7 +49,7 @@ export default function Chat(props) {
 
             <main className="chatMessages">
                 {messages && messages.map(msg => <Message key={msg.id} text={msg.text} uid={msg.uid} portrait={msg.photoURL} timestamp={msg.timeStamp} user={msg.displayName} />)}
-                <div ref={dummy}></div>
+                <div style={{height: "0"}} ref={dummy}></div>
             </main>
 
             <footer className="chatFooter">
