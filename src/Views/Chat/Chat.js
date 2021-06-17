@@ -13,7 +13,7 @@ export default function Chat(props) {
     var [ user ] = useAuthState(firebase.auth());
 
     var messagesReference = firebase.firestore().collection("messages");
-    var query = messagesReference.orderBy("timeStamp").limit(20);
+    var query = messagesReference.orderBy("timeStamp");
     var [messages] = useCollectionData(query, { idField:"id" });
 
     var [value, setValue] = useState("");
