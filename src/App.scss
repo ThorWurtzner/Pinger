@@ -1,14 +1,20 @@
 .app {
   width: 500px;
   margin: 0 auto;
-  border-left: 20px solid #000;
-  border-right: 20px solid #000;
-  border-top: 50px solid #000;
-  border-bottom: 50px solid #000;
-  border-radius: 50px;
+  // border-left: 20px solid #000;
+  // border-right: 20px solid #000;
+  // border-top: 50px solid #000;
+  // border-bottom: 50px solid #000;
+  // border-radius: 50px;
   height: 100vh;
-  min-height: 750px;
+  // min-height: 750px;
   max-height: 1000px;
+}
+
+@media screen and (max-width: 500px) {
+  .app {
+    width: 100%;
+  }
 }
 
 .background {
