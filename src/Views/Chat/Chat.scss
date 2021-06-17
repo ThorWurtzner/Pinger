@@ -1,0 +1,101 @@
+
+.chat {
+    height: 100%;
+    min-height: 650px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chatHeader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    background-color: #fff;
+    border-bottom: 1px solid rgb(231, 231, 231);
+
+    p {
+        margin-left: 30px;
+        font-weight: bolder;
+        color: #000000a1;
+    }
+
+    button {
+        border: none;
+        border-radius: 5px;
+        padding: 5px 20px;
+        margin-right: 30px;
+        background-color: #dfdfdf;
+        color: rgb(95, 95, 95);
+        transition: background-color 0.2s;
+
+        &:hover {
+            cursor: pointer;
+            background-color: darken(#dfdfdf, 10%);
+        }
+    }
+}
+
+.chatMessages {
+    height: 70vh;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #fdfdfd;
+
+    // border-radius: 20px 20px 0 0;
+    overflow-Y: scroll;
+    flex: 1;
+}
+
+.chatFooter {
+    height: 90px;
+    background-color: rgb(255, 255, 255);
+    border-top: 1px solid rgb(196, 196, 196);
+
+    form {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 30px;
+
+        .fa-plus-circle {
+            color: rgb(0, 153, 255);
+            font-size: 18px;
+            margin-right: 10px;
+        }
+
+        input {
+            height: 40%;
+            flex: 1;
+            border-radius: 50px;
+            background-color: #f1f1f1;
+            border: 1px solid #006aff0e;
+            transition: 0.2s;
+            padding: 0 20px;
+            font-size: 14px;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        button {
+            border: none;
+            background-color: #006AFF;
+            border-radius: 10px;
+            padding: 11px 20px;
+            color: #fff;
+            margin-left: 20px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+
+            &:hover {
+                background-color: lighten(#006AFF, 10%);
+            }
+        }
+    }
+}

@@ -1,0 +1,58 @@
+
+.message {
+    min-width: 100px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    // text-align: center;
+    margin-right: 40px;
+
+    img {
+        width: 40px;
+        border-radius: 50%;
+        position: absolute;
+        right: -50px;
+        bottom: 15px;
+    }
+
+    p {
+        background-color: rgb(0, 153, 255);
+        padding: 7px 20px;
+        border-radius: 20px 20px 5px 20px;
+        margin-bottom: 30px;
+        color: #fff;
+    }
+
+    span {
+        font-size: 9px;
+        position: absolute;
+        top: -20px;
+        right: 5px;
+        color: grey;
+    }
+}
+
+.sent {
+    flex-direction: row-reverse;
+}
+
+.received {
+    margin-right: 0;
+    margin-left: 40px;
+
+    img {
+        left: -50px;
+    }
+
+    p {
+        background-color: #d9e4fa;
+        color: #000;
+        border-radius: 20px 20px 20px 5px;
+    }
+
+    span {
+        left: 5px;
+    }
+}
